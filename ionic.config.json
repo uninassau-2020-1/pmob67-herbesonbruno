@@ -1,0 +1,7 @@
+{
+  "name": "pmob_camelo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
