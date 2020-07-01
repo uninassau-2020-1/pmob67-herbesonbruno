@@ -1,8 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-searchbar [(ngModel)]="cep" (ionChange)="cepBusca()" placeholder="Digite o cep" type="text" ></ion-searchbar>
+     
+      <ion-list class="ion-margin-horizontal" [hidden]="!cep.length">
+        <ion-item (click)="apontaRua(result)" *ngFor="let result of searchResults">
+          {{result.description}}
+        </ion-item>
+      </ion-list>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +17,5 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div #map id="container"></div>
 </ion-content>

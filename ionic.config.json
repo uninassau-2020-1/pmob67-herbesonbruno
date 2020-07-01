@@ -1,5 +1,7 @@
 {
   "name": "pmob_mapa",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
